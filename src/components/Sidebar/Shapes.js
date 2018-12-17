@@ -3,7 +3,7 @@ import { Segment, Icon } from "semantic-ui-react";
 import { DragSource } from "react-dnd";
 // import ShapeItem from "./ShapeItem";
 
-class ShapesX extends Component {
+class Shapes extends Component {
   state = {
     shape: [],
     currentShape: {
@@ -73,4 +73,4 @@ const collect = (connect, monitor) => ({
   isDragging: monitor.isDragging()
 });
 
-export default DragSource("shape", spec, collect)(ShapesX);
+export default DragSource("shape", spec, collect)(Shapes);

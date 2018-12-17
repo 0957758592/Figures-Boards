@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import ShapesX from "./ShapesX";
+import Shapes from "./Shapes";
 
-class ShapesBoardX extends Component {
+class ShapesBoard extends Component {
   state = {
     shapes: [],
     droppable: true
@@ -11,7 +11,7 @@ class ShapesBoardX extends Component {
   render() {
     return (
       <div>
-        <ShapesX {...this.props} />
+        <Shapes {...this.props} />
       </div>
     );
   }
@@ -21,4 +21,4 @@ const mapStateToProps = state => ({
   shapes: state.shapes
 });
 
-export default connect(mapStateToProps)(withRouter(ShapesBoardX));
+export default connect(mapStateToProps)(withRouter(ShapesBoard));

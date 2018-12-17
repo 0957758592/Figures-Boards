@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Header, Icon, Divider } from "semantic-ui-react";
-import ShapesBoardX from "./ShapesBoardX";
+import ShapesBoard from "./ShapesBoard";
 
 import { connect } from "react-redux";
 import { shapesApi } from "../../api";
@@ -20,7 +20,7 @@ class Sidebar extends Component {
         </Header>
         <Divider />
         <div className="sidebar">
-          <ShapesBoardX />
+          <ShapesBoard />
         </div>
       </div>
     );

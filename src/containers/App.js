@@ -28,7 +28,7 @@ class App extends Component {
             <Grid.Column width={13}>
               {connectDropTarget(
                 <div style={{ height: "100%", ...dropStyle }}>
-                  <Board />
+                  <Board {...this.props} />
                 </div>
               )}
             </Grid.Column>
@@ -41,13 +41,8 @@ class App extends Component {
 
 const spec = {
   drop(props, monitor) {
-    const shapeId = monitor.getItem().shapeId;
-    console.log("---", "event", props.event);
-    const eventShapeId = props.event;
-
-    console.log("---", "event", eventShapeId, "shape", shapeId); //fail
-
-    return eventShapeId;
+    const shapesId = monitor.getItem().shapeId;
+    // return shapesId;
   }
 };
 
@@ -59,5 +54,3 @@ const collect = (connect, monitor) => ({
 });
 
 export default DropTarget(["shape"], spec, collect)(App);
-
-// export default App;
